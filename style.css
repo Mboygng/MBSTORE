@@ -1,56 +1,39 @@
 /* RESET BÁSICO */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: #e4e4e4; font-family: sans-serif; }
+body { background-color: #e4e4e4; font-family: sans-serif; text-align: center; }
 
 /* LAYOUT ESTRUCTURAL */
-.banner-container { width: 100%; text-align: center; margin: 20px 0; }
-.banner-img { width: 400px; height: auto; }
+.banner-container { width: 100%; text-align: center; margin: 10px 0; }
 
-.store-container { width: 600px; margin: 0 auto; padding: 20px; }
+/* Banner: tamaño máximo ajustado para PS3 */
+.banner-img { max-width: 380px; width: 100%; height: auto; display: block; margin: 0 auto; }
 
-/* GRID PARA EL INDEX */
-.repo-grid { display: block; }
-.box-item { display: block; margin-bottom: 10px; }
-.box-img { width: 100%; height: auto; }
+/* Contenedor principal: ancho máximo para que quepa en cualquier TV */
+.store-container { max-width: 620px; width: 90%; margin: 0 auto; padding: 15px; }
 
-/* LISTAS DE DESCARGA (OPTIMIZADO PARA PS3) */
-.downloads-list { width: 100%; }
+/* GRID PARA EL INDEX (Botones de secciones) */
+.repo-grid { display: block; margin-top: 20px; }
 
-.download-item { 
-    display: block; 
-    background: #252525; 
-    padding: 15px; 
-    margin-bottom: 10px; 
-    color: #fff; 
-    text-decoration: none; 
-    border: 2px solid #333;
-    font-weight: bold;
-    text-align: left;
-    position: relative;
-}
+/* Botones: cada botón de sección ocupará el ancho completo */
+.box-item { display: block; max-width: 300px; width: 100%; margin: 0 auto 10px auto; text-decoration: none; }
 
-.btn-dl { 
-    display: block;
-    background: #ff0000; 
-    padding: 10px; 
-    margin-top: 5px;
-    text-align: center;
-    color: white; 
-    text-decoration: none;
-    font-size: 0.9rem;
-}
+/* Imágenes de los botones (HEN, Herramientas, Tiendas): tamaño ajustado */
+.box-img { width: 100%; height: auto; display: block; border-radius: 6px; }
+
+/* LISTAS DE DESCARGA (Páginas internas) */
+.downloads-list { width: 100%; text-align: left; }
+
+/* Elementos de descarga: bloque simple */
+.download-item { display: block; background: #252525; padding: 12px; margin-bottom: 10px; color: #fff; text-decoration: none; border: 2px solid #333; font-weight: bold; font-size: 1rem; border-radius: 6px; position: relative; }
+
+/* Botón de descarga dentro del item */
+.btn-dl { display: block; background: #ff0000; padding: 10px; margin-top: 8px; text-align: center; color: white; text-decoration: none; font-size: 0.9rem; border-radius: 4px; font-weight: bold; }
+
+/* Iconos HEN y Herramientas: ajustados para que no sean gigantes */
+.hen-icon, .tool-icon { width: 35px; height: 35px; vertical-align: middle; margin-right: 12px; border-radius: 4px; object-fit: contain; }
 
 /* OTROS ELEMENTOS */
-.back-btn { 
-    display: block; 
-    width: 200px; 
-    margin: 30px auto; 
-    text-align: center; 
-    padding: 15px; 
-    background: #333; 
-    color: white; 
-    text-decoration: none; 
-}
+.back-btn { display: block; width: 180px; margin: 30px auto; text-align: center; padding: 12px; background: #333; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
 
 .warning-text { color: #ff0000; font-weight: bold; }
-.category-title { margin: 20px 0; color: #333; }
+.category-title { margin: 15px 0 10px 0; color: #333; font-size: 1.2rem; }
