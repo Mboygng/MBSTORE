@@ -1,0 +1,162 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: #e4e4e4; 
+    font-family: sans-serif; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+/* Banner: ajusta width al tamaño exacto que quieras */
+.banner-container { 
+    width: 100%; 
+    max-width: 400px; /* <--- Esto controla que no sea gigante */
+    margin: 20px auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.banner-img { 
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+/* Grid de botones */
+.store-container { 
+    max-width: 800px; 
+    width: 100%; 
+    padding: 20px; 
+}
+
+.repo-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+}
+
+.box-item { 
+    display: block; 
+    transition: 0.2s; 
+}
+
+.box-item:hover { transform: scale(1.05); }
+.box-img { width: 100%; height: auto; display: block; }
+/* Estilos específicos para las páginas de contenido (como HEN) */
+.section-title { 
+    margin-top: 50px; /* Esto da espacio arriba si no hay banner */
+}
+
+.downloads-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.download-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #252525; 
+    padding: 20px; 
+    border-radius: 8px;
+    color: #fff; 
+    text-decoration: none; 
+    border: 2px solid #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-item:hover { 
+    border-color: #ff0000; 
+    background: #303030;
+}
+
+.btn-dl { 
+    background: #ff0000; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    color: white; 
+    font-size: 0.9rem;
+}
+
+.back-btn { 
+    display: block; 
+    width: 200px; 
+    margin: 50px auto; 
+    text-align: center;
+    padding: 15px; 
+    background: #333; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back-btn:hover { background: #444; }
+.hen-icon { 
+    width: 40px; 
+    height: 40px; 
+    margin-right: 15px; 
+    border-radius: 5px; 
+}
+
+.download-item { 
+    display: flex; 
+    align-items: center; /* Alinea icono, texto y botón */
+    justify-content: space-between;
+    background: #252525; 
+    padding: 15px 20px; 
+    border-radius: 8px;
+    color: #fff; 
+    text-decoration: none; 
+    border: 2px solid #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.version-group {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+}
+
+.fix-item {
+    margin-top: 5px;
+    background: #333 !important;
+    border-color: #e67e22 !important;
+}
+
+.fix-item:hover {
+    border-color: #ff9f43 !important;
+}
+/* Estilos específicos para las páginas de contenido (herramientas) */
+.tool-icon { 
+    width: 45px; 
+    height: 45px; 
+    margin-right: 20px; 
+    border-radius: 6px;
+    object-fit: contain; /* Esto asegura que el logo no se deforme */
+}
+.warning-text {
+    color: #ff0000;      /* Rojo */
+    font-weight: bold;   /* En negrita para que destaque más */
+    margin-right: 5px;
+}
+/* Estilos específicos para las páginas de contenido (tiendas) */
+.store-info { 
+    color: #cccccc; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 1rem; 
+}
+/* Estilo especial para el pack de 15 tiendas */
+.all-in-one-item {
+    border: 2px solid #e67e22 !important; /* Borde naranja/dorado */
+    background: #33261a !important;       /* Fondo un poco más claro */
+}
