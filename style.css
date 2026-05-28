@@ -1,39 +1,97 @@
-/* RESET BÁSICO */
+/* --- RESET Y BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background-color: #e4e4e4; font-family: sans-serif; text-align: center; }
 
-/* LAYOUT ESTRUCTURAL */
-.banner-container { width: 100%; text-align: center; margin: 10px 0; }
+/* --- ÍNDICE (LOS 4 ICONOS EN FILA) --- */
+.repo-grid { display: block; text-align: center; margin-top: 20px; }
 
-/* Banner: tamaño máximo ajustado para PS3 */
-.banner-img { max-width: 380px; width: 100%; height: auto; display: block; margin: 0 auto; }
+.box-item { 
+    display: inline-block; 
+    width: 20%; 
+    margin: 10px; 
+    vertical-align: top;
+    text-decoration: none; 
+}
 
-/* Contenedor principal: ancho máximo para que quepa en cualquier TV */
-.store-container { max-width: 620px; width: 90%; margin: 0 auto; padding: 15px; }
+.box-img { width: 100%; height: auto; display: block; border-radius: 10px; }
 
-/* GRID PARA EL INDEX (Botones de secciones) */
-.repo-grid { display: block; margin-top: 20px; }
+/* --- PÁGINAS DE CONTENIDO (LISTAS) --- */
+.downloads-list { width: 90%; max-width: 600px; margin: 0 auto; text-align: left; }
 
-/* Botones: cada botón de sección ocupará el ancho completo */
-.box-item { display: block; max-width: 300px; width: 100%; margin: 0 auto 10px auto; text-decoration: none; }
+.download-item { 
+    display: flex; /* Usamos flex solo aquí porque es más fácil para alinear icono + texto */
+    align-items: center;
+    background: #252525; 
+    padding: 12px; 
+    margin-bottom: 10px; 
+    color: #fff; 
+    text-decoration: none; 
+    border: 2px solid #333; 
+    border-radius: 6px;
+}
 
-/* Imágenes de los botones (HEN, Herramientas, Tiendas): tamaño ajustado */
-.box-img { width: 100%; height: auto; display: block; border-radius: 6px; }
+/* Tamaño fijo para los iconos pequeños dentro de las listas */
+.hen-icon, .tool-icon { 
+    width: 40px; 
+    height: 40px; 
+    margin-right: 15px; 
+    object-fit: contain; 
+}
 
-/* LISTAS DE DESCARGA (Páginas internas) */
-.downloads-list { width: 100%; text-align: left; }
+/* Botón de descarga en la lista */
+.btn-dl { 
+    margin-left: auto; /* Empuja el botón a la derecha */
+    background: #ff0000; 
+    padding: 8px 12px; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 0.8rem; 
+    border-radius: 4px; 
+    font-weight: bold;
+}
 
-/* Elementos de descarga: bloque simple */
-.download-item { display: block; background: #252525; padding: 12px; margin-bottom: 10px; color: #fff; text-decoration: none; border: 2px solid #333; font-weight: bold; font-size: 1rem; border-radius: 6px; position: relative; }
+/* --- BOTÓN VOLVER --- */
+.back-btn { 
+    display: block; 
+    width: 150px; 
+    margin: 30px auto; 
+    padding: 12px; 
+    background: #333; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold;
+}
+/* Texto de instrucciones (sección informativa) */
+.instruction-text {
+    color: #444;           /* Un gris oscuro elegante */
+    font-size: 0.95rem;    /* Un poco más pequeño que el cuerpo normal */
+    margin: 10px 0;
+    line-height: 1.4;
+    text-align: center;
+}
 
-/* Botón de descarga dentro del item */
-.btn-dl { display: block; background: #ff0000; padding: 10px; margin-top: 8px; text-align: center; color: white; text-decoration: none; font-size: 0.9rem; border-radius: 4px; font-weight: bold; }
-
-/* Iconos HEN y Herramientas: ajustados para que no sean gigantes */
-.hen-icon, .tool-icon { width: 35px; height: 35px; vertical-align: middle; margin-right: 12px; border-radius: 4px; object-fit: contain; }
-
-/* OTROS ELEMENTOS */
-.back-btn { display: block; width: 180px; margin: 30px auto; text-align: center; padding: 12px; background: #333; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
-
-.warning-text { color: #ff0000; font-weight: bold; }
-.category-title { margin: 15px 0 10px 0; color: #333; font-size: 1.2rem; }
+/* Texto de advertencia (para cosas peligrosas) */
+.warning-text {
+    color: #ff0000;        /* Rojo vibrante */
+    font-weight: bold;     /* Negrita para que salte a la vista */
+    font-size: 0.9rem;
+    margin: 5px 0;
+    text-align: center;
+    border: 1px solid #ff0000;
+    padding: 5px;
+    border-radius: 4px;
+}
+.category-title {
+    display: block;
+    width: 100%;
+    max-width: 600px; /* Igual al ancho de tus botones */
+    margin: 25px auto 15px auto; /* Espacio arriba y abajo */
+    padding: 10px;
+    color: #ff0000; /* Rojo para que combine con tus botones */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #ff0000; /* Una línea divisoria roja abajo */
+    letter-spacing: 2px; /* Un toque más moderno */
+}
