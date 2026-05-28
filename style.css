@@ -4,23 +4,15 @@ body { background-color: #e4e4e4; font-family: sans-serif; text-align: center; }
 
 /* --- ÍNDICE (LOS 4 ICONOS EN FILA) --- */
 .repo-grid { display: block; text-align: center; margin-top: 20px; }
-
-.box-item { 
-    display: inline-block; 
-    width: 20%; 
-    margin: 10px; 
-    vertical-align: top;
-    text-decoration: none; 
-}
-
+.box-item { display: inline-block; width: 20%; margin: 10px; vertical-align: top; text-decoration: none; }
 .box-img { width: 100%; height: auto; display: block; border-radius: 10px; }
 
 /* --- PÁGINAS DE CONTENIDO (LISTAS) --- */
 .downloads-list { width: 90%; max-width: 600px; margin: 0 auto; text-align: left; }
 
+/* CAMBIO CLAVE AQUÍ: Usamos bloque simple en lugar de flex */
 .download-item { 
-    display: flex; /* Usamos flex solo aquí porque es más fácil para alinear icono + texto */
-    align-items: center;
+    display: block; 
     background: #252525; 
     padding: 12px; 
     margin-bottom: 10px; 
@@ -28,19 +20,21 @@ body { background-color: #e4e4e4; font-family: sans-serif; text-align: center; }
     text-decoration: none; 
     border: 2px solid #333; 
     border-radius: 6px;
+    overflow: hidden; /* Esto ayuda a contener el botón flotante */
 }
 
-/* Tamaño fijo para los iconos pequeños dentro de las listas */
+/* Iconos dentro de las listas */
 .hen-icon, .tool-icon { 
+    float: left; /* El icono a la izquierda */
     width: 40px; 
     height: 40px; 
     margin-right: 15px; 
     object-fit: contain; 
 }
 
-/* Botón de descarga en la lista */
+/* Botón de descarga con float */
 .btn-dl { 
-    margin-left: auto; /* Empuja el botón a la derecha */
+    float: right; /* El botón a la derecha */
     background: #ff0000; 
     padding: 8px 12px; 
     color: white; 
@@ -48,50 +42,13 @@ body { background-color: #e4e4e4; font-family: sans-serif; text-align: center; }
     font-size: 0.8rem; 
     border-radius: 4px; 
     font-weight: bold;
+    margin-top: 5px;
 }
 
 /* --- BOTÓN VOLVER --- */
-.back-btn { 
-    display: block; 
-    width: 150px; 
-    margin: 30px auto; 
-    padding: 12px; 
-    background: #333; 
-    color: white; 
-    text-decoration: none; 
-    border-radius: 6px; 
-    font-weight: bold;
-}
-/* Texto de instrucciones (sección informativa) */
-.instruction-text {
-    color: #444;           /* Un gris oscuro elegante */
-    font-size: 0.95rem;    /* Un poco más pequeño que el cuerpo normal */
-    margin: 10px 0;
-    line-height: 1.4;
-    text-align: center;
-}
+.back-btn { display: block; width: 150px; margin: 30px auto; padding: 12px; background: #333; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
 
-/* Texto de advertencia (para cosas peligrosas) */
-.warning-text {
-    color: #ff0000;        /* Rojo vibrante */
-    font-weight: bold;     /* Negrita para que salte a la vista */
-    font-size: 0.9rem;
-    margin: 5px 0;
-    text-align: center;
-    border: 1px solid #ff0000;
-    padding: 5px;
-    border-radius: 4px;
-}
-.category-title {
-    display: block;
-    width: 100%;
-    max-width: 600px; /* Igual al ancho de tus botones */
-    margin: 25px auto 15px auto; /* Espacio arriba y abajo */
-    padding: 10px;
-    color: #ff0000; /* Rojo para que combine con tus botones */
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 2px solid #ff0000; /* Una línea divisoria roja abajo */
-    letter-spacing: 2px; /* Un toque más moderno */
-}
+/* --- TEXTOS --- */
+.instruction-text { color: #444; font-size: 0.95rem; margin: 10px 0; line-height: 1.4; text-align: center; }
+.warning-text { color: #ff0000; font-weight: bold; font-size: 0.9rem; margin: 5px 0; text-align: center; border: 1px solid #ff0000; padding: 5px; border-radius: 4px; }
+.category-title { display: block; width: 100%; max-width: 600px; margin: 25px auto 15px auto; padding: 10px; color: #ff0000; font-size: 1.2rem; font-weight: bold; text-align: center; border-bottom: 2px solid #ff0000; letter-spacing: 2px; }
